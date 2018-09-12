@@ -1,18 +1,112 @@
 # AWS-auto-ami-backup-across-all-region using node js
-AWS auto AMI backup across all region or cross region using lambda node js
 
-# I have used Lambda Function To take auto AMI backup across all region
+Simple Easy to AWS auto AMI backup across all region or cross region using lambda (node js)
 
-iam-policy.json (Policy File)
-role-trust-policy.json (Role file)
+## Getting Started
 
-Create Police assign it to Role Assign Role to lambda Function
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Create.js (Backup AMI + Snapshot Using node js)
-Delete js (Delete AMI + Snapshot Using node js)
+### Prerequisites
 
-# For automation you can use Cloud Watch Event Trigger 
+What things you need to install the software
 
-Assign Cloud watch Event Trigger To Lambda To Run Function on Particular Time
+```
+AWS Lambda 
 
-Cron Expression for Cloud Watch : 
+AWS Sdk
+```
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Make Policy Using File
+
+```
+iam-policy.json
+```
+
+Make Role Using File
+
+```
+role-trust-policy.json
+```
+
+Assign or attach policy to Role
+
+Create Two 2 New Lambda Function And Assign Role That you made
+
+Use Code From File for Lambda Functions
+```
+1. Create.js
+
+2. Delete.js
+```
+
+
+## Running the tests
+
+Run Lambda Function And Check For Snap Shot and AMI
+
+### Full Automation Using Cloud Watch 
+
+Use Cloud Watch Event as Trigger To Make Full Automation of Backup System
+
+```
+From Lambda Trigger Choose Cloud Watch Event
+```
+
+### Cron Job Cloud Watch 
+
+Cloud Watch Cron Job Expression
+
+```
+Cron Expression :-
+cron(fields)
+
+Example:
+The first example creates a rule that is triggered every day at 12:00pm UTC.
+cron(0 12 * * ? *)
+
+The next example creates a rule that is triggered every day, at 5 and 35 minutes past 2:00pm UTC.
+
+cron(5,35 14 * * ? *)
+
+
+Rate Expression :-
+rate(value unit)
+
+Example :
+The first example creates a rule that is triggered every 5 minutes.
+rate(5 minutes)
+
+The next example creates a rule that is triggered every 1 hour.
+rate(1 hour)
+
+```
+
+## Deployment
+
+Deployment On AWS Lambda Or Locally 
+
+## Built With
+
+* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
+## Contributing
+
+Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+* **Harsh Manvar** - *Web Developer* - [harsh4870](https://github.com/harsh4870)
+
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc
+
