@@ -38,9 +38,9 @@ Create Two 2 New Lambda Function And Assign Role That you made
 
 Use Code From File for Lambda Functions
 ```
-1. Create.js
+1. Create_AMI.js
 
-2. Delete.js
+2. Delete_AMI.js
 ```
 
 
